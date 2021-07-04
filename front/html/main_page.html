@@ -1,0 +1,92 @@
+<nav class="navbar navbar-light" style="background-color:#778899;">
+	<button type="button" class="btn btn-outline-light" style="margin-left: 30px">Домой</button>
+	<div class="dropdown">
+  		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    		Каталог
+  		</button>
+  		<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    		<li><a class="dropdown-item" href="#">Категория 1</a></li>
+    		<li><a class="dropdown-item" href="#">Категория 2</a></li>
+    		<li><a class="dropdown-item" href="#">Категория 3</a></li>
+  		</ul>
+	</div>
+	<div>
+		<input type="search" placeholder="Поиск по сайту" class="form-control" style="width: 500px; margin-right: 180px">
+	</div>
+	<div class="dropdown">
+  		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="margin-right: 30px">
+    		Профиль
+  		</button>
+  		<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    		<li><a class="dropdown-item" href="#">Мои заказы</a></li>
+    		<li><a id="trash" class="dropdown-item" href="#">Моя корзина</a></li>
+    		<li><a class="dropdown-item" href="#">Настройки</a></li>
+    		<li><button id="exit" class="dropdown-item" href="#">Выйти</button></li>
+  		</ul>
+	</div>
+</nav>
+<div style="padding-top: 30px">
+	<script>
+	    document.addEventListener('DOMContentLoaded', function () {
+	      // инициализация слайдера
+	      var slider = new SimpleAdaptiveSlider('.slider', {
+	        autoplay: true,
+	        interval: 5000,
+	        swipe: true,
+	      });
+	    });
+  	</script>
+  	<style>
+	    /* стили для элемента body */
+	    body {
+	      margin: 0;
+	      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+	        sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	    }
+
+	    /* дополнительные стили для этого примера */
+	    .slider__items {
+	      counter-reset: slide;
+	    }
+
+	    .slider__item {
+	      counter-increment: slide;
+	    }
+
+	    .slider__item>div::before {
+	      content: counter(slide);
+	      position: absolute;
+	      top: 10px;
+	      right: 20px;
+	      color: #fff;
+	      font-style: italic;
+	      font-size: 32px;
+	      font-weight: bold;
+	    }
+  	</style>
+	<div class="slider">
+		<div class="slider__wrapper">
+	        <div class="slider__items">
+		        <div class="slider__item">
+		        	<div style="height: 250px; background: url('/project12/images/img1.jpg');"></div>
+		        </div>
+		        <div class="slider__item">
+		          	<div style="height: 250px; background: url('/project12/images/img2.jpg');"></div>
+		        </div>
+		        <div class="slider__item">
+		          	<div style="height: 250px; background: url('/project12/images/img3.jpg');"></div>
+		        </div>
+		        <div class="slider__item">
+		          	<div style="height: 250px; background: url('/project12/images/img4.jpg');"></div>
+		        </div>
+	      	</div>
+	    </div>
+	    <a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
+	    <a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
+	</div>
+</div>
+<div id="cards" style="margin-top: 30px; margin-left: 250px">
+	
+</div>
+<script type="text/javascript" src="frontend/js/main_page.js"></script>
+
